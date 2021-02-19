@@ -1,0 +1,16 @@
+{
+  "name": "ua_capstone",
+  "version": "1.0.0",
+  "description": "Test software for the LBT's M1 actuator boards",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Austin Pierson",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^10.1.5",
+    "jquery": "^3.5.1",
+    "python-shell": "^2.0.2"
+  }
+}
