@@ -1,0 +1,227 @@
+:root {
+  --main-bg-color: rgb(40, 40, 40);
+  --default-font-color: rgb(210, 210, 210);
+}
+
+body {
+  transition: all 0.3s;
+  background: var(--main-bg-color);
+  color: var(--default-font-color);
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+  min-width: 180px;
+  max-width: 180px;
+  height: 100vh;
+  background: rgb(30, 30, 30);
+  color: var(--default-font-color);
+  transition: all 0.3s;
+  border: 1px solid black;
+}
+
+#sidebar.active {
+  margin-left: -180px;
+  border: none;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  font-size: 30px;
+  color: var(--default-font-color);
+  border-bottom: 1px solid black;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: rgb(240, 240, 240);
+  background: rgb(60, 60, 60);
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR TOGGLE AND RUN/STOP BUTTON STYLE
+----------------------------------------------------- */
+#sidebarCollapse {
+  border: none;
+  text-decoration: none;
+  outline: none !important;
+  box-shadow: none;
+  margin: 0px !important;
+  padding: 3px 10px 5px 10px;
+  font-size: 30px;
+  background: var(--main-bg-color);
+  color: var(--default-font-color);
+}
+
+#sidebarCollapse:hover {
+  outline: none !important;
+  color: rgb(240, 240, 240);
+  background: rgb(60, 60, 60);
+}
+
+#stoprunbtn {
+  display: flex;
+  color: rgb(70, 150, 50);
+  background: rgb(60, 60, 60);
+  outline: none !important;
+  box-shadow: none;
+}
+
+#stoprunbtn:hover {
+  color: rgb(240, 240, 240);
+  background: rgb(70, 150, 50);
+}
+
+.fa-play,
+.fa-stop {
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.run-active {
+  color: rgb(150, 70, 50) !important;
+  background: rgb(60, 60, 60) !important;
+}
+
+.run-active:hover {
+  color: rgb(240, 240, 240) !important;
+  background: rgb(150, 70, 50) !important;
+}
+
+.container-fluid {
+  padding: 0px;
+  height: 50px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.line-break {
+  width: 100%;
+  height: 0;
+}
+
+/* ---------------------------------------------------
+    TEST SET-UP STYLE
+----------------------------------------------------- */
+
+.user-setup {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 25%;
+  margin: 10px;
+  padding: 10px;
+  background: rgb(30, 30, 30);
+  border: 1px solid black;
+}
+
+.user-setup h3 {
+  align-self: flex-start;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.user-setup .form-group {
+  margin: 15px;
+}
+
+.user-setup label,
+.user-setup legend {
+  font-size: 1.1em;
+  color: var(--default-font-color);
+}
+
+.user-setup input[type="text"] {
+  background: rgb(60, 60, 60);
+  color: var(--default-font-color);
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.user-setup legend {
+  text-align: center;
+  width: auto;
+}
+.user-setup fieldset {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.user-setup fieldset input[type="radio"] {
+  margin-left: 30px;
+  margin-right: 2px;
+}
+
+/* ---------------------------------------------------
+    RESULTS STYLE
+----------------------------------------------------- */
+
+.results {
+  display: flex;
+  flex: 1 0 70%;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  background: rgb(30, 30, 30);
+  color: var(--default-font-color);
+  height: 80vh;
+}
+
+.results .elapsed-time {
+  display: flex;
+  flex: 0 1 auto;
+  font-size: 1.3em;
+  margin: 5px;
+  border-bottom: 2px solid black;
+}
+
+.results .real-time-response {
+  display: flex;
+  margin: 5px;
+  font-size: 1.1em;
+  word-break: break-all;
+  /* overflow-wrap: break-word; */
+}
+
+.results .conclusion {
+  background: rgb(30, 30, 30);
+}

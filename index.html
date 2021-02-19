@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script>
+        if (typeof module === 'object') { window.module = module; module = undefined; }
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./javascripts/test.js"></script>
+    <script src="./linkers/testlink.js"></script>
+    <script>if (window.module) module = window.module;</script>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>MATT~</title>
+</head>
+
+<body>
+    <script>
+        require('./renderer.js');
+    </script>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Navigation</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Test</a>
+                </li>
+                <li>
+                    <a href="#">Database</a>
+                </li>
+                <li>
+                    <a href="#">Manual</a>
+                </li>
+                <li>
+                    <a href="#">Help</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content">
+            <!-- Page buttons (toggle slidebar, stop/run) -->
+            <!--container-fluid d-flex justify-content-between-->
+            <div class="container-fluid d-flex justify-content-between">
+                <button type="button" id="sidebarCollapse" class="btn btn-default btn-lg ">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <button type="button" id="stoprunbtn" class="btn btn-default btn-lg align-self-center">
+                    <b>Run</b><i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+                <!-- needed to center the run/stop button -->
+                <span></span>
+                <div class="line-break"></div>
+                <!-- User Setup -->
+                <div class="user-setup">
+                    <h3>Parameters/Set-up</h3>
+                    <div class="form-group">
+                        <!-- Test Name -->
+                        <label for="testname">Test Name (optional):</label>
+                        <input type="text" class="form-control text-input" id="testname">
+
+                        <!-- Board number -->
+                        <label for="boardnumber">Board Number (required):</label>
+                        <input type="text" class="form-control text-input" id="boardnumber">
+
+                        <!-- Axis type -->
+                        <fieldset>
+                            <legend>Axis Type (required)</legend>
+                            <input type="radio" name="axis" value="Single" id="single" checked>
+                            <label for="single">Single</label>
+                            <input type="radio" name="axis" value="Dual" id="dual">
+                            <label for="dual">Dual</label>
+                        </fieldset>
+                        <!-- Handle input error -->
+                        <div class="input-error"></div>
+                    </div>
+                </div>
+                <!-- Results display -->
+                <div class="results flex-column">
+                    <div class="elapsed-time">Time elapsed - <span id="time">00:00:00</span></div>
+                    <div class="real-time-response text-wrap"></div>
+                    <!-- Test conclusion -->
+                    <div class="conclusion">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>

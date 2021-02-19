@@ -1,0 +1,8 @@
+#dependencies
+/node_modules
+
+# for building on pc
+/.vscode
+
+/package-lock.json
+/package.json
