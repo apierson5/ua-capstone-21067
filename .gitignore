@@ -1,7 +1,7 @@
 #dependencies
-/node_modules
+**node_modules
 
 # for building on pc
-/.vscode
+**.vscode
 
-/package-lock.json
+**package-lock.json
